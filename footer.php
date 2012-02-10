@@ -6,7 +6,6 @@
         </div>
       </footer>
     </div>
-    <!-- <?php wp_footer(); ?> -->
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
