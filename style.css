@@ -13,7 +13,7 @@ Tags: bootstrap
 .border { border: 1px solid #000; }
 .border-red { border: 1px solid #f00; }
 .navbar { margin: 0 !important; }
-.post { margin: 0 0 20px 0;
+.post { margin: 0 0 20px 0; }
 .well { padding: 14px; }
 .well > h2 { font-size: 18px; line-height: 18px; margin-bottom: 5px; }
 
