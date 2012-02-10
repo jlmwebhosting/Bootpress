@@ -1,3 +1,10 @@
+Bootpress is a Wordpress them using the CSS and Javascript provided by Twitter’s Bootstrap library. The final goal is to have a theme that had many different page template designs all using the Bootstrap codebase. This will allow someone who wants to have a wordpress based website to get started quickly, with some great looking pages, nd have some great functionality.
 
-References
+Current todo list.
+
+* Finish fleshing out the base theme pages (specifically the comments)
+* Figure out a list of templates to start working on.
+* Build and implement admin controls.
+
+References used in building this theme (some code may be duplicated so credit is given here)
 http://www.onextrapixel.com/2011/03/08/how-to-code-a-wordpress-3-0-theme-from-scratch/
