@@ -56,7 +56,8 @@
               <?php wp_nav_menu(array(
                                   'container' => false,
                                   'items_wrap' => '<ul id="%1$s" class="%2$s nav">%3$s</ul>',
-                                  'menu' => 'Primary Menu'
+                                  'menu' => 'Primary Menu',
+                                  'walker' => new Bootpress_Walker_Nav_Menu
                                 )); ?>
             </div><!--/.nav-collapse -->
           </div>

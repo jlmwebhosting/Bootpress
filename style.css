@@ -35,3 +35,22 @@ div.sidebar > ul > li > ul > li > ul li { list-style: none; }
 div.sidebar > ul > li > ul > li > ul li ul { padding: 0; margin: 0 0 0 10px; }
 div.sidebar > ul > li > ul > li > ul li ul li { list-style: none; }
 
+/* we'll start bastardizing bootstraps dropdown menus for hovering here.*/
+.hoverdropdown .caret {
+  margin-top: 8px;
+  margin-left: 2px;
+}
+.hoverdropdown:hover .caret {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.hoverdropdown:hover .dropdown-toggle {
+  color: #ffffff;
+  background: #ccc;
+  background: rgba(0, 0, 0, 0.3);
+}
+.hoverdropdown:hover .dropdown-menu {
+  top: 97%;
+  display: block;
+}
