@@ -7,10 +7,10 @@ function bootstrap_nav_link_buffer_callback($buffer)
 }
 
 ?>
-<div class="navigation">
+<div class="navigation row">
 <?php
   ob_start("bootstrap_nav_link_buffer_callback");
-  posts_nav_link('' ,'Previous', 'Next'); 
+  posts_nav_link(' ' ,'Previous', 'Next'); 
   // Clean the buffer and stop bufferign
   ob_end_flush();
 ?>
