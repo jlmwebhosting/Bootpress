@@ -26,10 +26,14 @@ function bootstrap_comment_get_allowed_tags()
 {
   preg_match_all("/&lt;.*?&gt;/", allowed_tags(), $allowed_tags_array, 0, 0);
 
+  $tags_array = array_map("bootstrap_listify_allowed_tags",  $allowed_tags_array[0]);
+
   // Encapsulate all the allowed HTML tags in a code tag within an li tag
-  return implode("", array_map(function($value){return '<li><code>' . $value . '</code></li>'; },  $allowed_tags_array[0]));
+  return implode("", $tags_array);
   
 }
+
+function bootstrap_listify_allowed_tags($value){ return '<li><code>' . $value . '</code></li>'; }
 
 function bootstrap_comment_form_buffer_callback($buffer = "")
 {
