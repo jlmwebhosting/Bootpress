@@ -2,7 +2,7 @@
 
 function bootstrap_nav_link_buffer_callback($buffer)
 {
-  $buffer = str_replace('href', 'class="btn btn-primary" href', $buffer);
+  $buffer = str_replace('href', 'class="btn btn-primary span2" href', $buffer);
   return $buffer;
 }
 
