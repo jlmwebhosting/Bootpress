@@ -4,6 +4,9 @@
 define('BOOTPRESS_PATH', dirname(__FILE__));
 define('BOOTPRESS_URL', get_bloginfo('template_url'));
 
+// Include our custom walker class.
+require_once(BOOTPRESS_PATH . '/classes/Bootpress_Walker_Nav_Menu.class.php');
+
 // Require functions and config files, config files always after function files.
 require_once(BOOTPRESS_PATH . '/functions/functions.comments.php');
 require_once(BOOTPRESS_PATH . '/config.php');
