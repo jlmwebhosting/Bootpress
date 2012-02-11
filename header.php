@@ -23,11 +23,6 @@
     </style>
     <!-- <link href="/wp-content/themes/bootpress/css/bootstrap-responsive.css" rel="stylesheet"> -->
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/wp-content/themes/bootpress/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/wp-content/themes/bootpress/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/wp-content/themes/bootpress/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/wp-content/themes/bootpress/images/apple-touch-icon-114x114.png">
     <?php
         /*
          *  Add this to support sites with sites with threaded comments enabled.
@@ -37,7 +32,14 @@
         // Include additional scripts and stylesheets
         wp_head();
         wp_get_archives('type=monthly&format=link');
-    ?>  </head>
+    ?>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/wp-content/themes/bootpress/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/wp-content/themes/bootpress/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/wp-content/themes/bootpress/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/wp-content/themes/bootpress/images/apple-touch-icon-114x114.png">
+  </head>
 
   <body>
     <div id="page-wrapper">

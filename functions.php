@@ -29,21 +29,30 @@ function new_excerpt_more($more) {
 if (function_exists('register_sidebar')) register_sidebar(array('before_widget' => '<li id="%1$s" class="widget %2$s well">'));
 
 function bootpress_scripts_method() {
-  
-    wp_register_script( 'bootstrap-transition', BOOTPRESS_URL . '/js/bootstrap-transition.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-alert', BOOTPRESS_URL . '/js/bootstrap-alert.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-modal', BOOTPRESS_URL . '/js/bootstrap-modal.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-dropdown', BOOTPRESS_URL . '/js/bootstrap-dropdown.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-scrollspy', BOOTPRESS_URL . '/js/bootstrap-scrollspy.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-tab', BOOTPRESS_URL . '/js/bootstrap-tab.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-tooltip', BOOTPRESS_URL . '/js/bootstrap-tooltip.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-popover', BOOTPRESS_URL . '/js/bootstrap-popover.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-button', BOOTPRESS_URL . '/js/bootstrap-button.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-collapse', BOOTPRESS_URL . '/js/bootstrap-collapse.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-carousel', BOOTPRESS_URL . '/js/bootstrap-carousel.js', array('jquery'), false, true);
-    wp_register_script( 'bootstrap-typeahead', BOOTPRESS_URL . '/js/bootstrap-typeahead.js', array('jquery'), false, true);
+
+    // Deregister wordpresses version of jquery so we can
+    // use the version that came with bootstrap
+    wp_deregister_script('jquery');
+
+    // Enqueue scripts that we'll place in the header.
+    wp_register_script( 'jquery', BOOTPRESS_URL . '/js/jquery.js', array(), '1.7.1', false);
+    
+    // Enqueue scripts that we'll place in the footer.
+    wp_register_script( 'bootstrap-transition', BOOTPRESS_URL . '/js/bootstrap-transition.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-alert', BOOTPRESS_URL . '/js/bootstrap-alert.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-modal', BOOTPRESS_URL . '/js/bootstrap-modal.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-dropdown', BOOTPRESS_URL . '/js/bootstrap-dropdown.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-scrollspy', BOOTPRESS_URL . '/js/bootstrap-scrollspy.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-tab', BOOTPRESS_URL . '/js/bootstrap-tab.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-tooltip', BOOTPRESS_URL . '/js/bootstrap-tooltip.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-popover', BOOTPRESS_URL . '/js/bootstrap-popover.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-button', BOOTPRESS_URL . '/js/bootstrap-button.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-collapse', BOOTPRESS_URL . '/js/bootstrap-collapse.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-carousel', BOOTPRESS_URL . '/js/bootstrap-carousel.js', array('jquery'), '2.0.0', true);
+    wp_register_script( 'bootstrap-typeahead', BOOTPRESS_URL . '/js/bootstrap-typeahead.js', array('jquery'), '2.0.0', true);
     
     // When we tried to use wp_enqueue_scripts we got memory errors, we'll revisit later.
+    wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap-alert');
     wp_enqueue_script('bootstrap-modal');
     wp_enqueue_script('bootstrap-dropdown');
