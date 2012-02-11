@@ -26,9 +26,7 @@
               </div>
             </div>
           <?php endwhile; ?>
-          <div class="navigation">
-          <?php posts_nav_link(); ?>
-          </div>          
+          <?php include_once('navigation_links.inc.php')?>
           <?php endif; ?>
         </div>
         <?php get_sidebar(); ?>

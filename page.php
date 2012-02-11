@@ -19,11 +19,7 @@
                 </p>
               </div>
             </div>
-          <?php endwhile; ?>
-          <div class="navigation">
-          <?php posts_nav_link(); ?>
-          </div>          
-          <?php endif; ?>
+          <?php endwhile; endif; ?>
         </div>
         <?php get_sidebar(); ?>
       </div>

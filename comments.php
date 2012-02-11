@@ -11,7 +11,6 @@
   ob_start("bootstrap_comment_form_buffer_callback");
   
   comment_form($bootpress_comment_form_args);
-  // include_once(BOOTPRESS_PATH . '/includes/form_comment.inc.php');
   
   // Clean the buffer and stop bufferign
   ob_end_flush();
