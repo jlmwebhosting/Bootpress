@@ -36,9 +36,6 @@
                   ?>
                 </p>
               </div>
-              <div class="comments-template">
-              <?php comments_template(); ?>
-              </div>
             </div>
           <?php endwhile; ?>
           <div class="navigation">

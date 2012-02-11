@@ -1,4 +1,11 @@
 <?php 
+
+define('BOOTPRESS_PATH', dirname(__FILE__));
+
+// Require functions and config files, config files always after function files.
+require_once(BOOTPRESS_PATH . '/functions/functions.comments.php');
+require_once(BOOTPRESS_PATH . '/config.php');
+
 //Register area for custom menu
 function register_my_menu()
 {

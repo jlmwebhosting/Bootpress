@@ -16,6 +16,14 @@ Tags: bootstrap
 .post { margin: 0 0 20px 0; }
 .well { padding: 14px; }
 .well > h2 { font-size: 18px; line-height: 18px; margin-bottom: 5px; }
+ul.comments { padding: 0; margin: 0; }
+ul.comments li { list-style: none; margin: 20px 0; }
+ul.allowed-tags-list { overflow: hidden; }
+ul.allowed-tags-list li { list-style: none; float: left; margin: 3px 5px 8px 0; }
+
+
+ul.comments li .comment-body > .p { width: 50px; }
+
 
 /* Handle the unordered lists in the sidebar */
 div.sidebar > ul { padding: 0; margin: 0; }

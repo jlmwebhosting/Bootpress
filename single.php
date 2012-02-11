@@ -21,7 +21,7 @@
                   ?>
                 </p>
               </div>
-              <div class="comments-template">
+              <div class="comments-template row">
               <?php comments_template(); ?>
               </div>
             </div>
