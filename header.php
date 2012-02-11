@@ -57,6 +57,7 @@
                                   'container' => false,
                                   'items_wrap' => '<ul id="%1$s" class="%2$s nav">%3$s</ul>',
                                   'menu' => 'Primary Menu',
+                                  'depth' => 1,
                                   'walker' => new Bootpress_Walker_Nav_Menu
                                 )); ?>
             </div><!--/.nav-collapse -->
