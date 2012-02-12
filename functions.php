@@ -69,15 +69,15 @@ function bootpress_scripts_and_styles() {
     wp_enqueue_script('bootstrap-typeahead');
 
     // add our styles
+    wp_register_style('bootstrap', BOOTPRESS_URL . '/css/bootstrap.css');
+    wp_register_style('bootpress', BOOTPRESS_URL . '/css/bootpress.css', array('bootstrap'));
+    wp_enqueue_style( 'bootstrap');      
+    wp_enqueue_style( 'bootpress');      
 
     // If the custom.css file exists include it.
     if(file_exists(BOOTPRESS_PATH . '/css/custom.css'))
     {
-      wp_register_style('bootstrap', BOOTPRESS_URL . '/css/bootstrap.css');
-      wp_register_style('bootpress', BOOTPRESS_URL . '/css/bootpress.css', array('bootstrap'));
       wp_register_style('bootpressCustom', BOOTPRESS_URL . '/css/custom.css', array('bootpress'));
-      wp_enqueue_style( 'bootstrap');      
-      wp_enqueue_style( 'bootpress');      
       wp_enqueue_style( 'bootpressCustom');      
     }
 

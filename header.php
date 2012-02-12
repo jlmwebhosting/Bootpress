@@ -12,8 +12,6 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <!-- <link href="/wp-content/themes/bootpress/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" /> -->
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     
     <style>
