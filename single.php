@@ -10,7 +10,7 @@
             <div class="entry">
               <?php 
                 the_post_thumbnail();
-                the_excerpt();
+                the_content();
               ?>
             </div>
             <div class="comments-template">
