@@ -1,8 +1,8 @@
-<ul class="comments span7">
-<?php wp_list_comments(); ?>
-</ul>
-
-<?php
+<div class="span7">
+  <ul class="comments">
+  <?php wp_list_comments(); ?>
+  </ul>
+  <?php
   // $bootpress_comment_form_args needs to be called global so we have access to it.
   global $bootpress_comment_form_args;
 
@@ -14,4 +14,5 @@
   
   // Clean the buffer and stop bufferign
   ob_end_flush();
-  
+  ?>
+</div>

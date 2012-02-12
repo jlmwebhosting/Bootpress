@@ -1,3 +1,25 @@
+/* start styles to manage the footer sticking to the bottom */
+html,body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.page-wrapper {
+  min-height:100%;
+  position:relative;
+}
+.content-container {
+  padding: 70px 0 60px 0; /* height of navbar and footer */
+}
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+}
+/* end styles to manage the footer sticking to the bottom */
+
 .border { border: 1px solid #000; }
 .border-red { border: 1px solid #f00; }
 .navbar { margin: 0 !important; }
@@ -9,9 +31,7 @@ ul.comments li { list-style: none; margin: 20px 0; }
 ul.allowed-tags-list { overflow: hidden; }
 ul.allowed-tags-list li { list-style: none; float: left; margin: 3px 5px 8px 0; }
 
-
 ul.comments li .comment-body > .p { width: 50px; }
-
 
 /* Handle the unordered lists in the sidebar */
 div.sidebar > ul { padding: 0; margin: 0; }
@@ -42,3 +62,25 @@ div.sidebar > ul > li > ul > li > ul li ul li { list-style: none; }
   top: 97%;
   display: block;
 }
+
+.common-two-column .sidebar-post { padding: 30px 0 0 0; }
+.common-two-column .sidebar-page { padding: 40px 0 0 0; }
+.common-two-column .main-content .page h2.page-title { border-bottom: 1px solid #ccc; }
+.common-two-column .main-content .post h3.post-title { border-bottom: 1px solid #ccc; position: relative; }
+.common-two-column .main-content .post h3.post-title span.post-author { display: block; font-size: 13px; font-weight: normal; position: absolute; bottom: -4px; right: 0; }
+.common-two-column .main-content .post-meta-data { text-align: right; margin: 5px 0 15px 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
