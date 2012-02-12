@@ -31,7 +31,7 @@ function new_excerpt_more($more) {
 //Some simple code for our widget-enabled sidebar
 if (function_exists('register_sidebar')) register_sidebar(array('before_widget' => '<li id="%1$s" class="widget %2$s well">'));
 
-function bootpress_scripts_method() {
+function bootpress_scripts_and_styles() {
 
     // Deregister wordpresses version of jquery so we can
     // use the version that came with bootstrap
@@ -67,8 +67,23 @@ function bootpress_scripts_method() {
     wp_enqueue_script('bootstrap-collapse');
     wp_enqueue_script('bootstrap-carousel');
     wp_enqueue_script('bootstrap-typeahead');
+
+    // add our styles
+
+    // If the custom.css file exists include it.
+    if(file_exists(BOOTPRESS_PATH . '/css/custom.css'))
+    {
+      wp_register_style('bootstrap', BOOTPRESS_URL . '/css/bootstrap.css');
+      wp_register_style('bootpress', BOOTPRESS_URL . '/css/bootpress.css', array('bootstrap'));
+      wp_register_style('bootpressCustom', BOOTPRESS_URL . '/css/custom.css', array('bootpress'));
+      wp_enqueue_style( 'bootstrap');      
+      wp_enqueue_style( 'bootpress');      
+      wp_enqueue_style( 'bootpressCustom');      
+    }
+
+
+
 }    
- 
 
 //Code for custom background support
 add_custom_background();
@@ -82,7 +97,7 @@ set_post_thumbnail_size(520, 250, false);
 
 // Actions and filters added below this comment. (place your functions above.)
 add_action('init', 'register_my_menu');
-add_action('wp_enqueue_scripts', 'bootpress_scripts_method');
+add_action('wp_enqueue_scripts', 'bootpress_scripts_and_styles');
 add_filter('excerpt_length', 'custom_excerpt_length');
 add_filter('excerpt_more', 'new_excerpt_more');
 
