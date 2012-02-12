@@ -70,6 +70,7 @@ div.sidebar > ul > li > ul > li > ul li ul li { list-style: none; }
 .common-two-column .main-content .post h3.post-title span.post-author { display: block; font-size: 13px; font-weight: normal; position: absolute; bottom: -4px; right: 0; }
 .common-two-column .main-content .post-meta-data { text-align: right; margin: 5px 0 15px 0; }
 
+.common-two-column .sidebar .widget_categories select { width: 190px; }
 
 
 
