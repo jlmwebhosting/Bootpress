@@ -6,5 +6,14 @@
       </div>
     </div>
     <?php wp_footer(); ?>
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+        if($('#wpadminbar').length > 0)
+        {
+          // Add the class in php later, but for now this works.
+          $('#main-nav-bar').addClass('wp-admin-menu');
+        }
+      });
+    </script>
   </body>
 </html>
