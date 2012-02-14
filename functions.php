@@ -29,7 +29,26 @@ function new_excerpt_more($more) {
 }
 
 //Some simple code for our widget-enabled sidebar
-if (function_exists('register_sidebar')) register_sidebar(array('before_widget' => '<li id="%1$s" class="widget %2$s well">'));
+if (function_exists('register_sidebar')) 
+{
+  register_sidebar(array(
+      'name' => 'Common Sidebar Widgets',
+      'before_widget' => '<li id="%1$s" class="widget %2$s well">'
+      ));
+  register_sidebar(array(
+      'name' => 'Homepage Widgets 1',
+      'before_widget' => '<li id="%1$s" class="widget %2$s">'
+      ));
+  register_sidebar(array(
+      'name' => 'Homepage Widgets 2',
+      'before_widget' => '<li id="%1$s" class="widget %2$s">'
+      ));
+  register_sidebar(array(
+      'name' => 'Homepage Widgets 3',
+      'before_widget' => '<li id="%1$s" class="widget %2$s">'
+      ));
+  
+}
 
 function bootpress_scripts_and_styles() {
 
